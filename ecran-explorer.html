@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jouet2Vie - Donnez une seconde vie aux jouets</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- EN-TÊTE -->
+  <header class="navbar">
+    <div class="nav-left">
+
+      <div class="logo">
+        <img src="images/logo/logo.jpeg" alt="Logo Jouet2Vie" width="40" height="40">
+        <span>Jouet2Vie</span>
+      </div>
+
+      <nav class="main-nav">
+        <button data-screen="accueil" class="active">Accueil</button>
+        <button data-screen="explorer">Explorer</button>
+        <button data-screen="favoris-stub">Favoris</button>
+        <button data-screen="messages-stub">Messages</button>
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="icon-btn" aria-label="Rechercher">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+            <path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <button class="btn btn-accent" data-screen="creer">
+          Créer une annonce
+        </button>
+
+        <button class="btn btn-outline" data-screen="connexion">
+          Se connecter
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main>
+
+    <!-- ÉCRAN EXPLORER -->
+    <section id="explorer" class="screen">
+
+      <h1 class="sr-only">Explorer les annonces de jouets</h1>
+
+      <div class="explorer-layout">
+
+        <!-- FILTRES À GAUCHE -->
+        <aside class="filters">
+
+          <div class="filter-group">
+            <h2>Catégories</h2>
+
+            <label class="filter-option">
+              <input type="checkbox" class="f-cat" value="societe">
+              Jeux de société
+            </label>
+
+            <label class="filter-option">
+              <input type="checkbox" class="f-cat" value="peluches">
+              Peluches
+            </label>
+
+            <label class="filter-option">
+              <input type="checkbox" class="f-cat" value="vehicules">
+              Véhicules
+            </label>
+
+            <label class="filter-option">
+              <input type="checkbox" class="f-cat" value="educatifs">
+              Jeux éducatifs
+            </label>
+
+            <label class="filter-option">
+              <input type="checkbox" class="f-cat" value="autres">
+              Autres
+            </label>
+          </div>
+
+          <div class="filter-group">
+            <h2>Type d'offre</h2>
+
+            <label class="filter-option">
+              <input type="checkbox" class="f-type" value="vente">
+              Vente
+            </label>
+
+            <label class="filter-option">
+              <input type="checkbox" class="f-type" value="echange">
+              Échange
+            </label>
+
+            <label class="filter-option">
+              <input type="checkbox" class="f-type" value="don">
+              Don
+            </label>
+          </div>
+
+          <div class="filter-group">
+            <h2>État</h2>
+
+            <label class="filter-option">
+              <input type="checkbox">
+              Neuf
+            </label>
+
+            <label class="filter-option">
+              <input type="checkbox">
+              Très bon état
+            </label>
+
+            <label class="filter-option">
+              <input type="checkbox">
+              Bon état
+            </label>
+
+            <label class="filter-option">
+              <input type="checkbox">
+              État correct
+            </label>
+          </div>
+
+          <div class="filter-group">
+            <h2>Prix</h2>
+
+            <div class="price-inputs">
+              <input type="number" placeholder="Min" id="price-min" aria-label="Prix minimum">
+
+              <input type="number" placeholder="Max" id="price-max" aria-label="Prix maximum">
+            </div>
+          </div>
+
+          <button class="btn btn-accent" style="width: 100%;" id="apply-filters">
+            Filtrer
+          </button>
+
+        </aside>
+
+        <!-- CONTENU À DROITE -->
+        <div class="explorer-content">
+
+          <!-- BARRE DE RECHERCHE ET TRI -->
+          <div class="explorer-toolbar">
+
+            <div class="search-bar">
+              <input type="text" placeholder="Rechercher…" aria-label="Rechercher une annonce">
+            </div>
+
+            <select class="sort" id="sort-select" aria-label="Options de tri">
+              <option value="recent">Trier par : Plus récent</option>
+              <option value="asc">Prix croissant</option>
+              <option value="desc">Prix décroissant</option>
+            </select>
+
+          </div>
+
+          <!-- ANNONCES SOUS LA BARRE DE RECHERCHE -->
+          <section class="annonces-explorer" aria-label="Liste des annonces de jouets">
+
+            <!-- ANNONCE 1 -->
+            <article class="annonce-item">
+
+              <img src="images/interfaces/circuit_train.jpeg" alt="Circuit de train" class="item-img" width="200"
+                height="200">
+
+              <div class="item-details">
+
+                <h3>Circuit de train</h3>
+
+                <div class="item-meta">
+                  <span class="price">0 $</span>
+                  <span class="badge badge-echange">Échange</span>
+                </div>
+
+              </div>
+            </article>
+
+            <!-- ANNONCE 2 -->
+            <article class="annonce-item">
+
+              <img src="images/interfaces/trampoline.jpg" alt="Trampoline de 12 pieds" class="item-img" width="200"
+                height="200">
+
+              <div class="item-details">
+
+                <h3>Trampoline 12 pieds</h3>
+
+                <div class="item-meta">
+                  <span class="price">90 $</span>
+                  <span class="badge badge-vente">Vente</span>
+                </div>
+
+              </div>
+            </article>
+
+            <!-- ANNONCE 3 -->
+            <article class="annonce-item">
+
+              <img src="images/interfaces/velo.jpeg" alt="Vélo pour enfant" class="item-img" width="200" height="200">
+
+              <div class="item-details">
+
+                <h3>Vélo</h3>
+
+                <div class="item-meta">
+                  <span class="price">75 $</span>
+                  <span class="badge badge-vente">Vente</span>
+                </div>
+
+              </div>
+            </article>
+
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jouet2Vie - Donnez une seconde vie aux jouets</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ÉCRAN 4 — MESSAGE -->
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo">
+        <img src="images/logo/logo.jpeg" alt="logo Jouet2Vie" width="40" height="40">
+        <span>Jouet2Vie</span>
+      </div>
+      <nav class="main-nav">
+        <button data-screen="accueil" class="active">Accueil</button>
+        <button data-screen="explorer">Explorer</button>
+        <button data-screen="favoris-stub">Favoris</button>
+        <button data-screen="messages-stub">Messages</button>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Rechercher">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+            <path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          </button>
+
+            <div class="user-avatar-top">
+              <i class="fa-solid fa-user"></i>
+            </div>
+          </div>
+
+      </div>
+  </header>
+
+  <div class="messaging-container">
+
+
+    <!-- ======================================
+           COLONNE DE GAUCHE
+           Liste des conversations
+      ======================================= -->
+
+    <aside class="chat-sidebar">
+
+      <div class="search-bar-container">
+
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+        <input type="text" placeholder="Rechercher une conversation...">
+
+      </div>
+
+
+      <div class="conversations-list">
+
+
+        <!-- Conversation active -->
+        <div class="conversation-item active">
+
+          <div class="avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <div class="conversation-info">
+
+            <div class="chat-header">
+
+              <span class="user-name">
+                Martin Dufresne
+              </span>
+
+              <span class="chat-time">
+                10:24
+              </span>
+
+            </div>
+
+            <div class="chat-preview-row">
+
+              <p class="last-message">
+                Bonjour, est-il toujours disponible ?
+              </p>
+
+              <span class="unread-badge">
+                1
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Conversation 2 -->
+        <div class="conversation-item">
+
+          <div class="avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <div class="conversation-info">
+
+            <div class="chat-header">
+
+              <span class="user-name">
+                Mélanie Auclair
+              </span>
+
+              <span class="chat-time">
+                Hier
+              </span>
+
+            </div>
+
+            <p class="last-message">
+              Merci beaucoup !
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Conversation 3 -->
+        <div class="conversation-item">
+
+          <div class="avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <div class="conversation-info">
+
+            <div class="chat-header">
+
+              <span class="user-name">
+                Zaro Ilorsaint
+              </span>
+
+              <span class="chat-time">
+                Hier
+              </span>
+
+            </div>
+
+            <p class="last-message">
+              D'accord, je te le réserve.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Conversation 4 -->
+        <div class="conversation-item">
+
+          <div class="avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <div class="conversation-info">
+
+            <div class="chat-header">
+
+              <span class="user-name">
+                Samuel Cormier
+              </span>
+
+              <span class="chat-time">
+                12 avr.
+              </span>
+
+            </div>
+
+            <p class="last-message">
+              Parfait, merci !
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </aside>
+
+
+    <!-- ======================================
+           COLONNE DE DROITE
+           Fenêtre de discussion
+      ======================================= -->
+
+    <main class="chat-window">
+
+
+      <!-- En-tête du chat -->
+      <div class="chat-window-header">
+
+        <div class="avatar">
+          <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div class="active-user-status">
+
+          <h1>
+            Martin Dufresne
+          </h1>
+
+          <span class="status-text">
+            En ligne
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Zone des messages -->
+      <div class="chat-messages-area">
+
+
+        <!-- Message reçu -->
+        <div class="message-row received">
+
+          <div class="message-content">
+
+            <p>
+              Bonjour, est-il toujours disponible ?
+            </p>
+
+            <span class="message-time">
+              10:24
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Message envoyé -->
+        <div class="message-row sent">
+
+          <div class="message-content">
+
+            <p>
+              Oui, il est toujours disponible ! Je peux vous
+              l'envoyer plus de photos si besoin.
+            </p>
+
+            <span class="message-time">
+              10:26
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Message reçu -->
+        <div class="message-row received">
+
+          <div class="message-content">
+
+            <p>
+              Parfait, merci !
+            </p>
+
+            <span class="message-time">
+              10:27
+            </span>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- Barre de saisie -->
+      <div class="chat-input-container">
+
+        <input type="text" placeholder="Écrire un message...">
+
+        <button class="send-btn">
+
+          <i class="fa-solid fa-paper-plane"></i>
+
+        </button>
+
+      </div>
+
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jouet2Vie - Mes favoris</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ÉCRAN 3 — FAVORIS -->
+
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo">
+        <img src="images/logo/logo.jpeg" alt="logo Jouet2Vie" width="40" height="40">
+        <span>Jouet2Vie</span>
+      </div>
+      <nav class="main-nav">
+        <button data-screen="accueil" class="active">Accueil</button>
+        <button data-screen="explorer">Explorer</button>
+        <button data-screen="favoris-stub">Favoris</button>
+        <button data-screen="messages-stub">Messages</button>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Rechercher">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+            <path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <button class="btn btn-accent" data-screen="creer">Créer une annonce</button>
+        <button class="btn btn-outline">Se connecter</button>
+      </div>
+      </div>
+  </header>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+
+      <!-- Barre latérale gauche -->
+      <aside class="sidebar">
+
+        <div class="profile-card">
+
+          <div class="profile-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <h1>Cyrille Bona</h1>
+
+          <p class="meta-info">
+            membre depuis Septembre 2026
+          </p>
+
+        </div>
+
+
+        <ul class="sidebar-menu">
+
+          <li>
+            <a href="#">
+              <i class="fa-regular fa-user"></i>
+              Mon profil
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-regular fa-newspaper"></i>
+              Mes annonces
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-arrows-rotate"></i>
+              Mes échanges
+            </a>
+          </li>
+
+          <li class="active">
+            <a href="#">
+              <i class="fa-regular fa-heart"></i>
+              Mes favoris
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-regular fa-comment"></i>
+              Mes messages
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-gear"></i>
+              Paramètres
+            </a>
+          </li>
+
+        </ul>
+
+
+        <div class="logout-container">
+
+          <a href="#" class="logout-btn">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            Déconnexion
+          </a>
+
+        </div>
+
+      </aside>
+
+
+      <!-- Section centrale : favoris -->
+      <main class="favorites-section">
+
+        <h2>Mes favoris (4)</h2>
+
+        <div class="favorites-list">
+
+
+          <!-- Item 1 -->
+          <div class="favorite-item">
+
+            <img src="images/interfaces/peluche_ours.jpg" alt="Peluche ours" class="item-img" width="200" height="200">
+
+            <div class="item-details">
+
+              <h3>Peluche ours</h3>
+
+              <div class="item-meta">
+                <span class="price">12 $</span>
+                <span class="badge badge-vente">Vente</span>
+              </div>
+
+            </div>
+
+            <i class="fa-solid fa-heart heart-icon active"></i>
+
+          </div>
+
+
+          <!-- Item 2 -->
+          <div class="favorite-item">
+
+            <img src="images/interfaces/camion_benne.jpeg" alt="Camion benne" class="item-img" width="200"
+              height="200">
+
+            <div class="item-details">
+
+              <h3>Camion benne</h3>
+
+              <div class="item-meta">
+                <span class="price">0 $</span>
+                <span class="badge badge-echange">Échange</span>
+              </div>
+
+            </div>
+
+            <i class="fa-solid fa-heart heart-icon active"></i>
+
+          </div>
+
+
+          <!-- Item 3 -->
+          <div class="favorite-item">
+
+            <img src="images/interfaces/jeu_de_societe.jpeg" alt="Jeu de société" class="item-img" width="200"
+              height="200">
+
+            <div class="item-details">
+
+              <h3>Jeu de société</h3>
+
+              <div class="item-meta">
+                <span class="price">15 $</span>
+                <span class="badge badge-vente">Vente</span>
+              </div>
+
+            </div>
+
+            <i class="fa-solid fa-heart heart-icon active"></i>
+
+          </div>
+
+
+          <!-- Item 4 -->
+          <div class="favorite-item">
+
+            <img src="images/interfaces/caisse_enregistreuse.jpeg" alt="Caisse enregistreuse" class="item-img"
+              width="200" height="200">
+
+            <div class="item-details">
+
+              <h3>Caisse enregistreuse</h3>
+
+              <div class="item-meta">
+                <span class="price">Gratuit</span>
+                <span class="badge badge-don">Don</span>
+              </div>
+
+            <i class="fa-solid fa-heart heart-icon active"></i>
+
+          </div>
+
+
+        </div>
+
+      </main>
+
+    </div>
+<script src="script.js"></script>
+</body>
+
+</html>

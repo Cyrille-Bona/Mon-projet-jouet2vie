@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jouet2Vie - Donnez une seconde vie aux jouets</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ÉCRAN 6 — CRÉER UNE ANNONCE -->
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo">
+        <img src="images/logo/logo.jpeg" alt="logo Jouet2Vie" width="40" height="40">
+        <span>Jouet2Vie</span>
+      </div>
+      <nav class="main-nav">
+        <button data-screen="accueil" class="active">Accueil</button>
+        <button data-screen="explorer">Explorer</button>
+        <button data-screen="favoris-stub">Favoris</button>
+        <button data-screen="messages-stub">Messages</button>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Rechercher">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+            <path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <button class="btn btn-accent" data-screen="creer">Créer une annonce</button>
+        <button class="btn btn-outline">Se connecter</button>
+      </div>
+      </div>
+  </header>
+
+  <main>
+  <section id="creer" class="screen">
+    <div class="create-wrap">
+      <div class="stepper">
+        <div class="step current" data-step="1">
+          <div class="step-circle">1</div>
+          <div class="step-label">Informations</div>
+        </div>
+        <div class="step-line" data-line="1"></div>
+        <div class="step" data-step="2">
+          <div class="step-circle">2</div>
+          <div class="step-label">Photos</div>
+        </div>
+        <div class="step-line" data-line="2"></div>
+        <div class="step" data-step="3">
+          <div class="step-circle">3</div>
+          <div class="step-label">Récapitulatif</div>
+        </div>
+      </div>
+
+      <!-- Step 1 -->
+      <div class="form-card step-panel" data-panel="1">
+        <h1>Informations du jouet</h1>
+        <div class="field">
+          <label for="titre">Titre de l'annonce</label>
+          <input type="text" id="titre" placeholder="Ex. Circuit de train en bois">
+        </div>
+        <div class="field">
+          <label for="categorie">Catégorie</label>
+          <select id="categorie">
+            <option value="">Choisir une catégorie</option>
+            <option value="societe">Jeux de société</option>
+            <option value="peluches">Peluches</option>
+            <option value="vehicules">Véhicules</option>
+            <option value="educatifs">Jeux éducatifs</option>
+            <option value="autres">Autres</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Type d'offre</label>
+          <div class="radio-row">
+            <label class="radio-pill"><input type="radio" name="type-offre" value="vente" checked> Vente</label>
+            <label class="radio-pill"><input type="radio" name="type-offre" value="echange"> Échange</label>
+            <label class="radio-pill"><input type="radio" name="type-offre" value="don"> Don</label>
+          </div>
+        </div>
+        <div class="field" id="price-field">
+          <label for="prix">Prix <span class="hint">(en $)</span></label>
+          <input type="number" id="prix" placeholder="0">
+        </div>
+        <div class="field">
+          <label for="description">Description</label>
+          <textarea id="description"
+            placeholder="Décrivez l'état du jouet, ses dimensions, tout détail utile…"></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-ghost" data-screen="accueil">Annuler</button>
+          <button class="btn btn-accent" id="to-step-2">Suivant →</button>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-card step-panel" data-panel="2" style="display:none">
+        <h2>Photos du jouet</h2>
+        <div class="photo-drop">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="8.5" cy="10" r="1.6" stroke="currentColor" stroke-width="1.5" />
+            <path d="M3 16l5-4 4 3 3.5-3L21 16" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+          <div>Glissez vos photos ici, ou cliquez pour parcourir<br><span style="font-size:0.8rem">Jusqu'à 6 photos
+              —
+              la première sera la photo principale</span></div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-ghost" data-back="1">← Précédent</button>
+          <button class="btn btn-accent" id="to-step-3">Suivant →</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="form-card step-panel" data-panel="3" style="display:none">
+        <h3>Récapitulatif</h3>
+        <div id="recap"></div>
+        <div class="form-actions">
+          <button class="btn btn-ghost" data-back="2">← Précédent</button>
+          <button class="btn btn-accent" id="publish-btn">Publier l'annonce</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer>
+    <p class="copyright">
+      © 2026 Jouet2Vie - Tous droits réservés
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

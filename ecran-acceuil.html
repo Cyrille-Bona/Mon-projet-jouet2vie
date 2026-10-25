@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jouet2Vie - Donnez une seconde vie aux jouets </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+
+      <div class="logo">
+        <img src="images/logo/logo.jpeg" alt="logo Jouet2Vie" width="40" height="40">
+        <span>Jouet2Vie</span>
+      </div>
+
+      <nav class="main-nav">
+        <button data-screen="accueil" class="active">Accueil</button>
+        <button data-screen="explorer">Explorer</button>
+        <button data-screen="favoris-stub">Favoris</button>
+        <button data-screen="messages-stub">Messages</button>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Rechercher">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+            <path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <button class="btn btn-accent" data-screen="creer">
+          Créer une annonce
+        </button>
+
+        <button class="btn btn-outline" data-screen="connexion">
+          Se connecter
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ÉCRAN 1 — ACCUEIL -->
+    <section id="accueil" class="screen active">
+      <div class="hero">
+        <div>
+          <h1>Donnez une seconde vie aux jouets !</h1>
+          <p>Achetez, échangez ou offrez des jouets entre parents, près de chez vous.</p>
+          <div class="search-bar">
+            <input type="text" placeholder="Rechercher un jouet, une catégorie…">
+            <button class="btn btn-accent">Rechercher</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-title-row">
+        <h2 class="section-title">Catégories populaires</h2>
+      </div>
+      <div class="categories-row">
+        <button type="button" class="cat-chip-btn">
+          <!-- Icône de dé (FontAwesome) -->
+          <i class="fa-solid fa-dice cat-icon"></i>
+          Jeux de société
+        </button>
+        <button type="button" class="cat-chip-btn">
+          <!-- Icône de peluche (FontAwesome) -->
+          <i class="fa-solid fa-paw cat-icon"></i>
+          Peluches
+        </button>
+        <button type="button" class="cat-chip-btn">
+          <!-- Icône de voiture (FontAwesome) -->
+          <i class="fa-solid fa-car cat-icon"></i>
+          Véhicules
+        </button>
+        <button type="button" class="cat-chip-btn">
+          <!-- Icône de livre (FontAwesome) -->
+          <i class="fa-solid fa-book cat-icon"></i>
+          Jeux éducatifs
+        </button>
+        <button type="button" class="cat-chip-btn">
+          <!-- Icône d'ampoule (FontAwesome) -->
+          <i class="fa-solid fa-lightbulb cat-icon"></i>
+          Autres
+        </button>
+      </div>
+
+      <div class="section-title-row">
+        <h2 class="section-title">Dernières annonces</h2>
+        <a href="#" class="see-all" data-screen="explorer">Voir tout →</a>
+      </div>
+      <div class="listing-grid" id="home-grid"></div>
+     <section class="annonces-section">
+  <div class="annonce-item">
+    <img
+      src="images/interfaces/lego_city.jpeg"
+      alt="Lego City"
+      class="item-img"
+      width="200"
+      height="200"
+    >
+
+    <div class="item-details">
+      <h3>Lego City</h3>
+
+      <div class="item-meta">
+        <span class="price">100 $</span>
+        <span class="badge badge-vente">Vente</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="annonce-item">
+    <img
+      src="images/interfaces/peluche_ours.jpg"
+      alt="Peluche ours"
+      class="item-img"
+      width="200"
+      height="200"
+    >
+
+    <div class="item-details">
+      <h3>Peluche ours</h3>
+
+      <div class="item-meta">
+        <span class="price">12 $</span>
+        <span class="badge badge-vente">Vente</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="annonce-item">
+    <img
+      src="images/interfaces/camion_benne.jpeg"
+      alt="Camion benne"
+      class="item-img"
+      width="200"
+      height="200"
+    >
+
+    <div class="item-details">
+      <h3>Camion benne</h3>
+
+      <div class="item-meta">
+        <span class="price">Gratuit</span>
+        <span class="badge badge-don">Don</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="annonce-item">
+    <img
+      src="images/interfaces/jeu_de_societe.jpeg"
+      alt="Jeu de société"
+      class="item-img"
+      width="200"
+      height="200"
+    >
+
+    <div class="item-details">
+      <h3>Jeu de société</h3>
+
+      <div class="item-meta">
+        <span class="price">15 $</span>
+        <span class="badge badge-vente">Vente</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </section>
+  </main>
+  <footer>
+    <p class="copyright">
+      © 2026 Jouet2Vie - Tous droits réservés
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

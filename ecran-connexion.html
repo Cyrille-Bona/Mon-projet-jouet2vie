@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jouet2Vie - Donnez une seconde vie aux jouets</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ÉCRAN 5 — CONNEXION / INSCRIPTION -->
+  <main class="page">
+    <div class="container">
+
+      <!-- PARTIE GAUCHE -->
+      <section class="left">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="images/logo/logo.jpeg" alt="logo Jouet2Vie" width="300" height="300">
+        </div>
+        <h1>Jouet2Vie</h1>
+        <p class="description">
+          Rejoignez une communauté de parents qui donnent une seconde vie aux jouets.
+        </p>
+      </section>
+
+      <!-- PARTIE DROITE -->
+      <section class="right">
+        <!-- Titre masqué ou visible ajouté pour l'accessibilité et la validation sémantique -->
+        <h2 class="sr-only">Formulaires d'accès</h2>
+
+        <div class="form-box">
+
+          <!-- FORMULAIRE CONNEXION -->
+          <div id="connexionForm">
+            <div class="tabs">
+              <button class="tab active" id="connexionTab">Connexion</button>
+              <button class="tab" id="inscriptionTab">Inscription</button>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="votre@email.com">
+            </div>
+
+            <div class="form-group">
+              <label for="password">Mot de passe</label>
+              <div class="password">
+                <input type="password" id="password" placeholder="Votre mot de passe">
+                <button class="show-password" id="showPassword" type="button">👁</button>
+              </div>
+            </div>
+
+            <div class="options">
+              <label class="remember">
+                <input type="checkbox"> Se souvenir de moi
+              </label>
+              <a href="#" class="forgot">Mot de passe oublié ?</a>
+            </div>
+
+            <button class="main-button">Se connecter</button>
+
+            <div class="separator">
+              <span>ou</span>
+            </div>
+
+            <button class="social-button">
+              <i class="fa-brands fa-google"></i> Continuer avec Google
+            </button>
+            <button class="social-button">
+              <i class="fa-brands fa-facebook-f"></i> Continuer avec Facebook
+            </button>
+
+            <p class="register">
+              Pas encore de compte ?
+              <a id="registerLink" href="#">S'inscrire</a>
+            </p>
+          </div>
+
+          <!-- FORMULAIRE INSCRIPTION -->
+          <div id="inscriptionForm" style="display: none;">
+            <div class="tabs">
+              <button class="tab" id="connexionTab2">Connexion</button>
+              <button class="tab active">Inscription</button>
+            </div>
+
+            <div class="form-group">
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" placeholder="Votre prénom">
+            </div>
+
+            <div class="form-group">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" placeholder="Votre nom">
+            </div>
+
+            <div class="form-group">
+              <label for="emailInscription">Email</label>
+              <input type="email" id="emailInscription" placeholder="votre@email.com">
+            </div>
+
+            <div class="form-group">
+              <label for="passwordInscription">Mot de passe</label>
+              <input type="password" id="passwordInscription" placeholder="Créer un mot de passe">
+            </div>
+
+            <button class="main-button">Créer mon compte</button>
+
+            <p class="register">
+              Déjà un compte ?
+              <a id="loginLink" href="#">Se connecter</a>
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p class="copyright">
+      © 2026 Jouet2Vie - Tous droits réservés
+    </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
